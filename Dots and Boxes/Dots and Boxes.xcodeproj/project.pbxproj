@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0815F81726865245008289CD /* Dots_and_BoxesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F81626865245008289CD /* Dots_and_BoxesApp.swift */; };
+		0815F81926865245008289CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F81826865245008289CD /* ContentView.swift */; };
+		0815F81B26865247008289CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0815F81A26865247008289CD /* Assets.xcassets */; };
+		0815F81E26865247008289CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0815F81D26865247008289CD /* Preview Assets.xcassets */; };
+		0815F82726865334008289CD /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F82626865334008289CD /* ExtensionColor.swift */; };
+		0815F82A268653F4008289CD /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F829268653F4008289CD /* Box.swift */; };
+		0815F82D268654DA008289CD /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F82C268654DA008289CD /* AudioPlayer.swift */; };
+		0815F82F26865689008289CD /* GameEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F82E26865689008289CD /* GameEnvironment.swift */; };
+		0815F831268657EB008289CD /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F830268657EB008289CD /* UserSettings.swift */; };
+		0815F8462686592E008289CD /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F8332686592D008289CD /* Raleway-ExtraLight.ttf */; };
+		0815F8472686592E008289CD /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F8342686592D008289CD /* Raleway-Bold.ttf */; };
+		0815F8482686592E008289CD /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F8352686592E008289CD /* Raleway-Light.ttf */; };
+		0815F8492686592E008289CD /* Raleway-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F8362686592E008289CD /* Raleway-LightItalic.ttf */; };
+		0815F84A2686592E008289CD /* Raleway-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F8372686592E008289CD /* Raleway-ExtraLightItalic.ttf */; };
+		0815F84B2686592E008289CD /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F8382686592E008289CD /* Raleway-ThinItalic.ttf */; };
+		0815F84C2686592E008289CD /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F8392686592E008289CD /* Raleway-Italic.ttf */; };
+		0815F84D2686592E008289CD /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F83A2686592E008289CD /* Raleway-Regular.ttf */; };
+		0815F84E2686592E008289CD /* Raleway-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F83B2686592E008289CD /* Raleway-ExtraBoldItalic.ttf */; };
+		0815F84F2686592E008289CD /* Raleway-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F83C2686592E008289CD /* Raleway-BoldItalic.ttf */; };
+		0815F8502686592E008289CD /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F83D2686592E008289CD /* BebasNeue-Regular.ttf */; };
+		0815F8512686592E008289CD /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F83E2686592E008289CD /* Raleway-SemiBold.ttf */; };
+		0815F8522686592E008289CD /* Raleway-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F83F2686592E008289CD /* Raleway-SemiBoldItalic.ttf */; };
+		0815F8532686592E008289CD /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F8402686592E008289CD /* Raleway-Thin.ttf */; };
+		0815F8542686592E008289CD /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F8412686592E008289CD /* Raleway-ExtraBold.ttf */; };
+		0815F8552686592E008289CD /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F8422686592E008289CD /* Raleway-Black.ttf */; };
+		0815F8562686592E008289CD /* Raleway-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F8432686592E008289CD /* Raleway-BlackItalic.ttf */; };
+		0815F8572686592E008289CD /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F8442686592E008289CD /* Raleway-Medium.ttf */; };
+		0815F8582686592E008289CD /* Raleway-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0815F8452686592E008289CD /* Raleway-MediumItalic.ttf */; };
+		0815F85C26865A98008289CD /* BoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F85B26865A98008289CD /* BoxView.swift */; };
+		0815F85E26865AC8008289CD /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F85D26865AC8008289CD /* Dot.swift */; };
+		0815F86026865AE0008289CD /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F85F26865AE0008289CD /* Line.swift */; };
+		0815F86326865B3B008289CD /* EndGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F86226865B3B008289CD /* EndGame.swift */; };
+		0815F86526865B5D008289CD /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F86426865B5D008289CD /* GameView.swift */; };
+		0815F86726865B7B008289CD /* ScoreGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F86626865B7B008289CD /* ScoreGame.swift */; };
+		0815F86926865B9A008289CD /* StartGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F86826865B9A008289CD /* StartGame.swift */; };
+		0815F86B26865BBA008289CD /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F86A26865BBA008289CD /* TimerView.swift */; };
+		0815F86E26865C13008289CD /* OnboardingMainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F86D26865C13008289CD /* OnboardingMainPage.swift */; };
+		0815F87026865C33008289CD /* OnboardingPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F86F26865C33008289CD /* OnboardingPage1.swift */; };
+		0815F87226865C58008289CD /* OnboardingPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F87126865C58008289CD /* OnboardingPage2.swift */; };
+		0815F87426865C80008289CD /* OnboardingPage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F87326865C80008289CD /* OnboardingPage3.swift */; };
+		0815F87626865C8D008289CD /* OnboardingPage4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F87526865C8D008289CD /* OnboardingPage4.swift */; };
+		0815F87826865C9B008289CD /* OnboardingPage5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F87726865C9B008289CD /* OnboardingPage5.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0815F81326865245008289CD /* Dots and Boxes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dots and Boxes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0815F81626865245008289CD /* Dots_and_BoxesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dots_and_BoxesApp.swift; sourceTree = "<group>"; };
+		0815F81826865245008289CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0815F81A26865247008289CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0815F81D26865247008289CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0815F81F26865247008289CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0815F82626865334008289CD /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
+		0815F829268653F4008289CD /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		0815F82C268654DA008289CD /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		0815F82E26865689008289CD /* GameEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEnvironment.swift; sourceTree = "<group>"; };
+		0815F830268657EB008289CD /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		0815F8332686592D008289CD /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
+		0815F8342686592D008289CD /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		0815F8352686592E008289CD /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
+		0815F8362686592E008289CD /* Raleway-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-LightItalic.ttf"; sourceTree = "<group>"; };
+		0815F8372686592E008289CD /* Raleway-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		0815F8382686592E008289CD /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
+		0815F8392686592E008289CD /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic.ttf"; sourceTree = "<group>"; };
+		0815F83A2686592E008289CD /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		0815F83B2686592E008289CD /* Raleway-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		0815F83C2686592E008289CD /* Raleway-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BoldItalic.ttf"; sourceTree = "<group>"; };
+		0815F83D2686592E008289CD /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
+		0815F83E2686592E008289CD /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		0815F83F2686592E008289CD /* Raleway-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		0815F8402686592E008289CD /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
+		0815F8412686592E008289CD /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
+		0815F8422686592E008289CD /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
+		0815F8432686592E008289CD /* Raleway-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BlackItalic.ttf"; sourceTree = "<group>"; };
+		0815F8442686592E008289CD /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		0815F8452686592E008289CD /* Raleway-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-MediumItalic.ttf"; sourceTree = "<group>"; };
+		0815F85B26865A98008289CD /* BoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxView.swift; sourceTree = "<group>"; };
+		0815F85D26865AC8008289CD /* Dot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
+		0815F85F26865AE0008289CD /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		0815F86226865B3B008289CD /* EndGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGame.swift; sourceTree = "<group>"; };
+		0815F86426865B5D008289CD /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		0815F86626865B7B008289CD /* ScoreGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreGame.swift; sourceTree = "<group>"; };
+		0815F86826865B9A008289CD /* StartGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGame.swift; sourceTree = "<group>"; };
+		0815F86A26865BBA008289CD /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		0815F86D26865C13008289CD /* OnboardingMainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingMainPage.swift; sourceTree = "<group>"; };
+		0815F86F26865C33008289CD /* OnboardingPage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage1.swift; sourceTree = "<group>"; };
+		0815F87126865C58008289CD /* OnboardingPage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage2.swift; sourceTree = "<group>"; };
+		0815F87326865C80008289CD /* OnboardingPage3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage3.swift; sourceTree = "<group>"; };
+		0815F87526865C8D008289CD /* OnboardingPage4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage4.swift; sourceTree = "<group>"; };
+		0815F87726865C9B008289CD /* OnboardingPage5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage5.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0815F81026865245008289CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0815F80A26865245008289CD = {
+			isa = PBXGroup;
+			children = (
+				0815F81526865245008289CD /* Dots and Boxes */,
+				0815F81426865245008289CD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0815F81426865245008289CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0815F81326865245008289CD /* Dots and Boxes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0815F81526865245008289CD /* Dots and Boxes */ = {
+			isa = PBXGroup;
+			children = (
+				0815F81626865245008289CD /* Dots_and_BoxesApp.swift */,
+				0815F85926865A6F008289CD /* View */,
+				0815F82B268654AC008289CD /* ViewModel */,
+				0815F828268653CB008289CD /* Model */,
+				0815F82526865315008289CD /* Extensions */,
+				0815F81826865245008289CD /* ContentView.swift */,
+				0815F81A26865247008289CD /* Assets.xcassets */,
+				0815F81F26865247008289CD /* Info.plist */,
+				0815F832268658DD008289CD /* Fonts */,
+				0815F81C26865247008289CD /* Preview Content */,
+			);
+			path = "Dots and Boxes";
+			sourceTree = "<group>";
+		};
+		0815F81C26865247008289CD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0815F81D26865247008289CD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0815F82526865315008289CD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0815F82626865334008289CD /* ExtensionColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0815F828268653CB008289CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0815F829268653F4008289CD /* Box.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0815F82B268654AC008289CD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0815F82C268654DA008289CD /* AudioPlayer.swift */,
+				0815F82E26865689008289CD /* GameEnvironment.swift */,
+				0815F830268657EB008289CD /* UserSettings.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0815F832268658DD008289CD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0815F83D2686592E008289CD /* BebasNeue-Regular.ttf */,
+				0815F8422686592E008289CD /* Raleway-Black.ttf */,
+				0815F8432686592E008289CD /* Raleway-BlackItalic.ttf */,
+				0815F8342686592D008289CD /* Raleway-Bold.ttf */,
+				0815F83C2686592E008289CD /* Raleway-BoldItalic.ttf */,
+				0815F8412686592E008289CD /* Raleway-ExtraBold.ttf */,
+				0815F83B2686592E008289CD /* Raleway-ExtraBoldItalic.ttf */,
+				0815F8332686592D008289CD /* Raleway-ExtraLight.ttf */,
+				0815F8372686592E008289CD /* Raleway-ExtraLightItalic.ttf */,
+				0815F8392686592E008289CD /* Raleway-Italic.ttf */,
+				0815F8352686592E008289CD /* Raleway-Light.ttf */,
+				0815F8362686592E008289CD /* Raleway-LightItalic.ttf */,
+				0815F8442686592E008289CD /* Raleway-Medium.ttf */,
+				0815F8452686592E008289CD /* Raleway-MediumItalic.ttf */,
+				0815F83A2686592E008289CD /* Raleway-Regular.ttf */,
+				0815F83E2686592E008289CD /* Raleway-SemiBold.ttf */,
+				0815F83F2686592E008289CD /* Raleway-SemiBoldItalic.ttf */,
+				0815F8402686592E008289CD /* Raleway-Thin.ttf */,
+				0815F8382686592E008289CD /* Raleway-ThinItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0815F85926865A6F008289CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0815F86C26865BDA008289CD /* Onboarding */,
+				0815F86126865B13008289CD /* Game */,
+				0815F85A26865A76008289CD /* Components */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0815F85A26865A76008289CD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0815F85B26865A98008289CD /* BoxView.swift */,
+				0815F85D26865AC8008289CD /* Dot.swift */,
+				0815F85F26865AE0008289CD /* Line.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0815F86126865B13008289CD /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				0815F86226865B3B008289CD /* EndGame.swift */,
+				0815F86426865B5D008289CD /* GameView.swift */,
+				0815F86626865B7B008289CD /* ScoreGame.swift */,
+				0815F86826865B9A008289CD /* StartGame.swift */,
+				0815F86A26865BBA008289CD /* TimerView.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		0815F86C26865BDA008289CD /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				0815F86D26865C13008289CD /* OnboardingMainPage.swift */,
+				0815F86F26865C33008289CD /* OnboardingPage1.swift */,
+				0815F87126865C58008289CD /* OnboardingPage2.swift */,
+				0815F87326865C80008289CD /* OnboardingPage3.swift */,
+				0815F87526865C8D008289CD /* OnboardingPage4.swift */,
+				0815F87726865C9B008289CD /* OnboardingPage5.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0815F81226865245008289CD /* Dots and Boxes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0815F82226865247008289CD /* Build configuration list for PBXNativeTarget "Dots and Boxes" */;
+			buildPhases = (
+				0815F80F26865245008289CD /* Sources */,
+				0815F81026865245008289CD /* Frameworks */,
+				0815F81126865245008289CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dots and Boxes";
+			productName = "Dots and Boxes";
+			productReference = 0815F81326865245008289CD /* Dots and Boxes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0815F80B26865245008289CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					0815F81226865245008289CD = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 0815F80E26865245008289CD /* Build configuration list for PBXProject "Dots and Boxes" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0815F80A26865245008289CD;
+			productRefGroup = 0815F81426865245008289CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0815F81226865245008289CD /* Dots and Boxes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0815F81126865245008289CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0815F8522686592E008289CD /* Raleway-SemiBoldItalic.ttf in Resources */,
+				0815F8532686592E008289CD /* Raleway-Thin.ttf in Resources */,
+				0815F8552686592E008289CD /* Raleway-Black.ttf in Resources */,
+				0815F81E26865247008289CD /* Preview Assets.xcassets in Resources */,
+				0815F84E2686592E008289CD /* Raleway-ExtraBoldItalic.ttf in Resources */,
+				0815F8542686592E008289CD /* Raleway-ExtraBold.ttf in Resources */,
+				0815F8562686592E008289CD /* Raleway-BlackItalic.ttf in Resources */,
+				0815F8502686592E008289CD /* BebasNeue-Regular.ttf in Resources */,
+				0815F84D2686592E008289CD /* Raleway-Regular.ttf in Resources */,
+				0815F8582686592E008289CD /* Raleway-MediumItalic.ttf in Resources */,
+				0815F84F2686592E008289CD /* Raleway-BoldItalic.ttf in Resources */,
+				0815F84C2686592E008289CD /* Raleway-Italic.ttf in Resources */,
+				0815F8482686592E008289CD /* Raleway-Light.ttf in Resources */,
+				0815F81B26865247008289CD /* Assets.xcassets in Resources */,
+				0815F8462686592E008289CD /* Raleway-ExtraLight.ttf in Resources */,
+				0815F8472686592E008289CD /* Raleway-Bold.ttf in Resources */,
+				0815F84B2686592E008289CD /* Raleway-ThinItalic.ttf in Resources */,
+				0815F84A2686592E008289CD /* Raleway-ExtraLightItalic.ttf in Resources */,
+				0815F8572686592E008289CD /* Raleway-Medium.ttf in Resources */,
+				0815F8492686592E008289CD /* Raleway-LightItalic.ttf in Resources */,
+				0815F8512686592E008289CD /* Raleway-SemiBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0815F80F26865245008289CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0815F86B26865BBA008289CD /* TimerView.swift in Sources */,
+				0815F86926865B9A008289CD /* StartGame.swift in Sources */,
+				0815F81926865245008289CD /* ContentView.swift in Sources */,
+				0815F87826865C9B008289CD /* OnboardingPage5.swift in Sources */,
+				0815F82A268653F4008289CD /* Box.swift in Sources */,
+				0815F87226865C58008289CD /* OnboardingPage2.swift in Sources */,
+				0815F82D268654DA008289CD /* AudioPlayer.swift in Sources */,
+				0815F86326865B3B008289CD /* EndGame.swift in Sources */,
+				0815F82F26865689008289CD /* GameEnvironment.swift in Sources */,
+				0815F87626865C8D008289CD /* OnboardingPage4.swift in Sources */,
+				0815F85C26865A98008289CD /* BoxView.swift in Sources */,
+				0815F86E26865C13008289CD /* OnboardingMainPage.swift in Sources */,
+				0815F85E26865AC8008289CD /* Dot.swift in Sources */,
+				0815F86726865B7B008289CD /* ScoreGame.swift in Sources */,
+				0815F831268657EB008289CD /* UserSettings.swift in Sources */,
+				0815F82726865334008289CD /* ExtensionColor.swift in Sources */,
+				0815F81726865245008289CD /* Dots_and_BoxesApp.swift in Sources */,
+				0815F87026865C33008289CD /* OnboardingPage1.swift in Sources */,
+				0815F86526865B5D008289CD /* GameView.swift in Sources */,
+				0815F87426865C80008289CD /* OnboardingPage3.swift in Sources */,
+				0815F86026865AE0008289CD /* Line.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0815F82026865247008289CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0815F82126865247008289CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0815F82326865247008289CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Dots and Boxes/Preview Content\"";
+				DEVELOPMENT_TEAM = SJND557DN4;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Dots and Boxes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy.Dots-and-Boxes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0815F82426865247008289CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Dots and Boxes/Preview Content\"";
+				DEVELOPMENT_TEAM = SJND557DN4;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Dots and Boxes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy.Dots-and-Boxes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0815F80E26865245008289CD /* Build configuration list for PBXProject "Dots and Boxes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0815F82026865247008289CD /* Debug */,
+				0815F82126865247008289CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0815F82226865247008289CD /* Build configuration list for PBXNativeTarget "Dots and Boxes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0815F82326865247008289CD /* Debug */,
+				0815F82426865247008289CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0815F80B26865245008289CD /* Project object */;
+}
