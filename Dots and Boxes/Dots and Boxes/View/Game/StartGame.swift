@@ -44,8 +44,8 @@ public struct StartView: View {
                 
             }
         }
-        .frame(width: 770, height: 1000)
-        .background(Color.darkColor)
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        .background(Color.darkColor.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/))
         .onTapGesture {
             AudioPlayer.shared.play(name: "discoveredSound", volume: 0.5, delay: 0.0)
             withAnimation(){

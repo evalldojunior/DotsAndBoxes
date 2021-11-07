@@ -13,7 +13,7 @@ public struct ScoreView: View {
     public var body: some View {
         HStack {
             // player 01
-            ZStack(alignment: .leading){
+            ZStack(alignment: .top){
                 HStack{
                     VStack(alignment: .leading){
                         Text("\(environment.player1Points!)")
@@ -22,7 +22,7 @@ public struct ScoreView: View {
                             .multilineTextAlignment(.leading)
                         
                         Text("\(environment.player1Name)")
-                            .font(.custom("Raleway-SemiBold", size: 20))
+                            .font(.custom("Raleway-Regular", size: 20))
                             .foregroundColor(Color.whiteColor)
                             .multilineTextAlignment(.leading)
                         
@@ -30,26 +30,26 @@ public struct ScoreView: View {
                             Image(systemName: "heart.fill")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 20, height: 20)
+                                .frame(width: UIScreen.main.bounds.height*0.020, height: UIScreen.main.bounds.height*0.020)
                                 .foregroundColor(environment.player1ExtraLife![0] ? environment.player1Color : Color.lightGreyColor)
                             
                             Image(systemName: "heart.fill")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 20, height: 20)
+                                .frame(width: UIScreen.main.bounds.height*0.020, height: UIScreen.main.bounds.height*0.020)
                                 .foregroundColor(environment.player1ExtraLife![1] ? environment.player1Color : Color.lightGreyColor)
                             
                             Image(systemName: "heart.fill")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 20, height: 20)
+                                .frame(width: UIScreen.main.bounds.height*0.020, height: UIScreen.main.bounds.height*0.020)
                                 .foregroundColor(environment.player1ExtraLife![2] ? environment.player1Color : Color.lightGreyColor)
                         }.padding(.bottom)
                     }.padding(.horizontal)
                     Spacer()
                 }
             }
-            .frame(width: 175, height: 175)
+            .frame(width: UIScreen.main.bounds.height*0.175, height: UIScreen.main.bounds.height*0.175)
             .background(Color.darkGreyColor)
             .cornerRadius(11)
             .overlay(
@@ -61,7 +61,7 @@ public struct ScoreView: View {
             Spacer()
             
             // player 02
-            ZStack(alignment: .trailing){
+            ZStack(alignment: .bottomTrailing){
                 HStack{
                     Spacer()
                     VStack(alignment: .trailing){
@@ -71,7 +71,7 @@ public struct ScoreView: View {
                             .multilineTextAlignment(.trailing)
                         
                         Text("\(environment.player2Name)")
-                            .font(.custom("Raleway-SemiBold", size: 20))
+                            .font(.custom("Raleway-Regular", size: 20))
                             .foregroundColor(Color.whiteColor)
                             .multilineTextAlignment(.trailing)
                         
@@ -79,25 +79,25 @@ public struct ScoreView: View {
                             Image(systemName: "heart.fill")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 20, height: 20)
+                                .frame(width: UIScreen.main.bounds.height*0.020, height: UIScreen.main.bounds.height*0.020)
                                 .foregroundColor(environment.player2ExtraLife![0] ? environment.player2Color : Color.lightGreyColor)
                             
                             Image(systemName: "heart.fill")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 20, height: 20)
+                                .frame(width: UIScreen.main.bounds.height*0.020, height: UIScreen.main.bounds.height*0.020)
                                 .foregroundColor(environment.player2ExtraLife![1] ? environment.player2Color : Color.lightGreyColor)
                             
                             Image(systemName: "heart.fill")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 20, height: 20)
+                                .frame(width: UIScreen.main.bounds.height*0.020, height: UIScreen.main.bounds.height*0.020)
                                 .foregroundColor(environment.player2ExtraLife![2] ? environment.player2Color : Color.lightGreyColor)
                         }.padding(.bottom)
                     }.padding(.horizontal)
                 }
             }
-            .frame(width: 175, height: 175)
+            .frame(width: UIScreen.main.bounds.height*0.175, height: UIScreen.main.bounds.height*0.175)
             .background(Color.darkGreyColor)
             .cornerRadius(11)
             .overlay(
@@ -105,7 +105,9 @@ public struct ScoreView: View {
                     .stroke((self.environment.turn == .player2) ? environment.colorTurn as! Color : Color.clear, lineWidth: 1.5)
             )
             .shadow(color: Color.black.opacity(0.2),radius: 20)
-        }.frame(width: 630)
+        }
+        .padding([.top, .horizontal],50)
+        .frame(width: UIScreen.main.bounds.width)
     }
 }
 

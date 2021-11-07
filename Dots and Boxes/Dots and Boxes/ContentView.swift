@@ -10,8 +10,8 @@ import SwiftUI
 struct ContentView: View {
     /// user inputs
     // Names
-    let player1Name = "gustavo"
-    let player2Name = "junior"
+    let player1Name = "testeeeeeeeee"
+    let player2Name = "testeeeeeeeeeeeeeeeee"
 
     // Colors
     // select the color following the example below
@@ -31,5 +31,21 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewDevice(PreviewDevice(rawValue: "iPad Pro (11-inch) (3rd generation)"))
+
+        ContentView()
+            .previewDevice(PreviewDevice(rawValue: "iPad Pro (12.9-inch) (5th generation)"))
+
+        ContentView()
+            .previewDevice(PreviewDevice(rawValue: "iPad Air (4th generation)"))
+
+        ContentView()
+            .previewDevice(PreviewDevice(rawValue: "iPad Pro (9.7-inch)"))
+
+        ContentView()
+            .previewDevice(PreviewDevice(rawValue: "iPad Mini (6th generation)"))
+//
+        ContentView()
+            .previewDevice(PreviewDevice(rawValue: "iPad (9th generation)"))
     }
 }

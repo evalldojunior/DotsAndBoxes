@@ -64,7 +64,7 @@ public struct EndGame: View {
                     .multilineTextAlignment(.center)
                     .padding()
                 
-                Text(!environment.endExtraLife ? "you just won a battle with \((environment.winner == .player1 ? environment.player1Points : environment.player2Points)!) boxes :)\n now try to challenge other players." : "unfortunately \((environment.winner == .player1 ? environment.player2Name : environment.player1Name)) lost all extra lives, so you just won a battle with \((environment.winner == .player1 ? environment.player1Points : environment.player2Points)!) boxes :)\n\n now try to challenge other players.")
+                Text(!environment.endExtraLife ? "you just won a battle with \((environment.winner == .player1 ? environment.player1Points : environment.player2Points)!) boxes :)" : "unfortunately \((environment.winner == .player1 ? environment.player2Name : environment.player1Name)) lost all extra lives, so you just won a battle with \((environment.winner == .player1 ? environment.player1Points : environment.player2Points)!) boxes :)")
                     .font(.custom("Raleway", size: 20))
                     .foregroundColor(Color.whiteColor)
                     .multilineTextAlignment(.center)
@@ -108,25 +108,26 @@ public struct EndGame: View {
                 Spacer().frame(height: 130)
             }
             
-            VStack {
-                Spacer()
-                HStack{
-                    Image(systemName: "lightbulb.fill")
-                        .resizable()
-                        .frame(width: 15, height: 23, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .foregroundColor(Color.lightGreyColor)
-                    
-                    Text("modify the attributes on the left side for a new and different game")
-                        .font(.custom("Raleway-Regular", size: 16))
-                        .foregroundColor(Color.lightGreyColor)
-                        .multilineTextAlignment(.center)
-                        .lineSpacing(6)
-                }
-                Spacer()
-                    .frame(height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            }
+//            VStack {
+//                Spacer()
+//                HStack{
+//                    Image(systemName: "lightbulb.fill")
+//                        .resizable()
+//                        .frame(width: 15, height: 23, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+//                        .foregroundColor(Color.lightGreyColor)
+//
+//                    Text("modify the attributes on the left side for a new and different game")
+//                        .font(.custom("Raleway-Regular", size: 16))
+//                        .foregroundColor(Color.lightGreyColor)
+//                        .multilineTextAlignment(.center)
+//                        .lineSpacing(6)
+//                }
+//                Spacer()
+//                    .frame(height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+//            }
         }
-        .background(Color.darkColor)
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        .background(Color.darkColor.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/))
         .onTapGesture {
             // restart game
             environment.resetGame()

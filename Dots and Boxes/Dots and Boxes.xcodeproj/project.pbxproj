@@ -49,6 +49,13 @@
 		0815F87426865C80008289CD /* OnboardingPage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F87326865C80008289CD /* OnboardingPage3.swift */; };
 		0815F87626865C8D008289CD /* OnboardingPage4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F87526865C8D008289CD /* OnboardingPage4.swift */; };
 		0815F87826865C9B008289CD /* OnboardingPage5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F87726865C9B008289CD /* OnboardingPage5.swift */; };
+		08D07A4A268677BC007F0A99 /* Raleway-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08D07A49268677BC007F0A99 /* Raleway-VariableFont_wght.ttf */; };
+		08D07A4E2686792A007F0A99 /* discoveredSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08D07A4C2686792A007F0A99 /* discoveredSound.wav */; };
+		08D07A4F2686792A007F0A99 /* boxSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08D07A4D2686792A007F0A99 /* boxSound.wav */; };
+		08D07A5226867933007F0A99 /* lostExtraLifeSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08D07A5026867933007F0A99 /* lostExtraLifeSound.wav */; };
+		08D07A5326867933007F0A99 /* pauseSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08D07A5126867933007F0A99 /* pauseSound.wav */; };
+		08D07A562686793D007F0A99 /* tapLine.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08D07A542686793C007F0A99 /* tapLine.wav */; };
+		08D07A572686793D007F0A99 /* winSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08D07A552686793D007F0A99 /* winSound.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +103,13 @@
 		0815F87326865C80008289CD /* OnboardingPage3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage3.swift; sourceTree = "<group>"; };
 		0815F87526865C8D008289CD /* OnboardingPage4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage4.swift; sourceTree = "<group>"; };
 		0815F87726865C9B008289CD /* OnboardingPage5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage5.swift; sourceTree = "<group>"; };
+		08D07A49268677BC007F0A99 /* Raleway-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		08D07A4C2686792A007F0A99 /* discoveredSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = discoveredSound.wav; sourceTree = "<group>"; };
+		08D07A4D2686792A007F0A99 /* boxSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boxSound.wav; sourceTree = "<group>"; };
+		08D07A5026867933007F0A99 /* lostExtraLifeSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lostExtraLifeSound.wav; sourceTree = "<group>"; };
+		08D07A5126867933007F0A99 /* pauseSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pauseSound.wav; sourceTree = "<group>"; };
+		08D07A542686793C007F0A99 /* tapLine.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tapLine.wav; sourceTree = "<group>"; };
+		08D07A552686793D007F0A99 /* winSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = winSound.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +151,7 @@
 				0815F81A26865247008289CD /* Assets.xcassets */,
 				0815F81F26865247008289CD /* Info.plist */,
 				0815F832268658DD008289CD /* Fonts */,
+				08D07A4B26867903007F0A99 /* Sounds */,
 				0815F81C26865247008289CD /* Preview Content */,
 			);
 			path = "Dots and Boxes";
@@ -179,6 +194,7 @@
 		0815F832268658DD008289CD /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				08D07A49268677BC007F0A99 /* Raleway-VariableFont_wght.ttf */,
 				0815F83D2686592E008289CD /* BebasNeue-Regular.ttf */,
 				0815F8422686592E008289CD /* Raleway-Black.ttf */,
 				0815F8432686592E008289CD /* Raleway-BlackItalic.ttf */,
@@ -247,6 +263,19 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		08D07A4B26867903007F0A99 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				08D07A542686793C007F0A99 /* tapLine.wav */,
+				08D07A552686793D007F0A99 /* winSound.wav */,
+				08D07A5026867933007F0A99 /* lostExtraLifeSound.wav */,
+				08D07A5126867933007F0A99 /* pauseSound.wav */,
+				08D07A4D2686792A007F0A99 /* boxSound.wav */,
+				08D07A4C2686792A007F0A99 /* discoveredSound.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,10 +333,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08D07A5226867933007F0A99 /* lostExtraLifeSound.wav in Resources */,
 				0815F8522686592E008289CD /* Raleway-SemiBoldItalic.ttf in Resources */,
 				0815F8532686592E008289CD /* Raleway-Thin.ttf in Resources */,
+				08D07A572686793D007F0A99 /* winSound.wav in Resources */,
 				0815F8552686592E008289CD /* Raleway-Black.ttf in Resources */,
 				0815F81E26865247008289CD /* Preview Assets.xcassets in Resources */,
+				08D07A562686793D007F0A99 /* tapLine.wav in Resources */,
 				0815F84E2686592E008289CD /* Raleway-ExtraBoldItalic.ttf in Resources */,
 				0815F8542686592E008289CD /* Raleway-ExtraBold.ttf in Resources */,
 				0815F8562686592E008289CD /* Raleway-BlackItalic.ttf in Resources */,
@@ -317,10 +349,14 @@
 				0815F84F2686592E008289CD /* Raleway-BoldItalic.ttf in Resources */,
 				0815F84C2686592E008289CD /* Raleway-Italic.ttf in Resources */,
 				0815F8482686592E008289CD /* Raleway-Light.ttf in Resources */,
+				08D07A4A268677BC007F0A99 /* Raleway-VariableFont_wght.ttf in Resources */,
 				0815F81B26865247008289CD /* Assets.xcassets in Resources */,
 				0815F8462686592E008289CD /* Raleway-ExtraLight.ttf in Resources */,
+				08D07A5326867933007F0A99 /* pauseSound.wav in Resources */,
 				0815F8472686592E008289CD /* Raleway-Bold.ttf in Resources */,
 				0815F84B2686592E008289CD /* Raleway-ThinItalic.ttf in Resources */,
+				08D07A4F2686792A007F0A99 /* boxSound.wav in Resources */,
+				08D07A4E2686792A007F0A99 /* discoveredSound.wav in Resources */,
 				0815F84A2686592E008289CD /* Raleway-ExtraLightItalic.ttf in Resources */,
 				0815F8572686592E008289CD /* Raleway-Medium.ttf in Resources */,
 				0815F8492686592E008289CD /* Raleway-LightItalic.ttf in Resources */,
@@ -496,7 +532,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy.Dots-and-Boxes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -518,7 +554,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy.Dots-and-Boxes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

@@ -12,8 +12,8 @@ public struct GameView: View {
     
     var rowCount = 9
     var colCount = 9
-    var maxFrameGame = CGFloat(625)
-    var boxSize = CGFloat(69)
+    var maxFrameGame = CGFloat(UIScreen.main.bounds.height*0.625)
+    var boxSize = CGFloat(UIScreen.main.bounds.height*0.069)
     @State var startGame = false
     @State var endGame = false
     
@@ -83,9 +83,10 @@ public struct GameView: View {
                     // game paused
                     ZStack{
                         Rectangle()
-                            .frame(width: maxFrameGame, height: maxFrameGame)
+                            .frame(width: UIScreen.main.bounds.width-100, height: UIScreen.main.bounds.width-100)
                             .foregroundColor(Color.darkGreyColor)
                             .cornerRadius(11)
+                            
                         
                         VStack{
                             Text("game paused")
@@ -101,7 +102,8 @@ public struct GameView: View {
                         }.padding(.bottom, -50)
                         
                     }
-                    .opacity(self.environment.pause! ? 1 : 0)
+                    
+                    .opacity(self.environment.pause! ? 0 : 0)
                     .onTapGesture {
                         self.environment.pauseGame()
                     }
@@ -126,8 +128,8 @@ public struct GameView: View {
             }
             
         }
-        .frame(width: 770, height: 1000)
-        .background(Color.darkColor)
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        .background(Color.darkColor.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/))
         .onAppear(){
             self.environment.pause = true
         }
@@ -141,7 +143,7 @@ public struct GameView: View {
                 }
             }
         }
-        .overlay(StartView(startGame: $startGame, player1Color: environment.player1Color, player2Color: environment.player2Color).opacity(self.startGame ? 0 : 1).animation(.easeInOut(duration: 0.3)))
+        .overlay(StartView(startGame: $startGame, player1Color: environment.player1Color, player2Color: environment.player2Color).opacity(self.startGame ? 0 : 0).animation(.easeInOut(duration: 0.3)))
         
     }
 }
