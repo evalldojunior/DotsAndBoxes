@@ -144,7 +144,7 @@ public struct GameView: View {
                 }
             }
         }
-        .overlay(StartView(startGame: $startGame, player1Color: environment.player1Color, player2Color: environment.player2Color).opacity(self.startGame ? 0 : 0).animation(.easeInOut(duration: 0.3)))
+        .overlay(StartView(startGame: $startGame, player1Color: environment.player1Color, player2Color: environment.player2Color).opacity(self.startGame ? 0 : 1).animation(.easeInOut(duration: 0.3)))
         
     }
 }
