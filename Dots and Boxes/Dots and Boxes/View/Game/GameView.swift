@@ -32,6 +32,8 @@ public struct GameView: View {
         }
         
         self.environment = GameEnvironment(rowCount: self.rowCount, colCount: self.colCount, player1Name: player1Name, player2Name: player2Name, player1Color: player1Color, player2Color: player2Color)
+        
+        boxSize = CGFloat(((Int(UIScreen.main.bounds.width)-150+(5*colCount))/colCount))
     }
     
     public var body: some View {
@@ -41,20 +43,20 @@ public struct GameView: View {
             if !environment.endGame {
                 ZStack {
                     Rectangle()
-                        .frame(width: boxSize*CGFloat(colCount)+CGFloat((20-colCount)), height: boxSize*CGFloat(rowCount)+CGFloat((20-rowCount)))
+                        .frame(width: boxSize*CGFloat(colCount)-CGFloat((5*colCount))+CGFloat(50), height: boxSize*CGFloat(rowCount)-CGFloat((5*rowCount))+CGFloat(50))
                         .foregroundColor(Color.darkGreyColor)
                         .cornerRadius(11)
                         .shadow(color: Color.black.opacity(0.2),radius: 20)
                     
                     // boxes and lines
-                    VStack{
+                    VStack(spacing: -5){
                         ForEach(0..<rowCount) { indexX in
-                            HStack{
+                            HStack(spacing: -5){
                                 ForEach(0..<colCount) { indexY in
                                     
                                     BoxView(environment: environment, indexX: indexX, indexY: indexY, box: environment.allBoxes[indexX][ indexY])
                                         .frame(width: boxSize, height: boxSize, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                        .padding(-7)
+                                        
                                     
                                 }
                             }
@@ -63,19 +65,18 @@ public struct GameView: View {
                     .opacity(self.environment.pause! ? 0 : 1)
                     
                     // dots
-                    VStack{
+                    VStack(spacing: 0){
                         ForEach(0..<rowCount+1) { indexX in
-                            HStack{
+                            HStack(spacing: 0){
                                 ForEach(0..<colCount+1) { indexY in
                                     Dot()
-                                        .padding(-2)
                                     if (indexY < colCount) {
-                                        Spacer().frame(width: boxSize-15)
+                                        Spacer().frame(width: boxSize-18)
                                     }
                                 }
                             }
                             if (indexX < rowCount) {
-                                Spacer().frame(height: boxSize-15)
+                                Spacer().frame(height: boxSize-18)
                             }
                         }
                     }.opacity(self.environment.pause! ? 0 : 1)
@@ -103,14 +104,14 @@ public struct GameView: View {
                         
                     }
                     
-                    .opacity(self.environment.pause! ? 0 : 0)
+                    .opacity(self.environment.pause! ? 1 : 0)
                     .onTapGesture {
                         self.environment.pauseGame()
                     }
                     
                     
                 }
-                .frame(width: maxFrameGame, height: maxFrameGame)
+                .frame(width: boxSize*CGFloat(colCount), height: boxSize*CGFloat(colCount))
                 .disabled(environment.endGame)
                 Spacer().frame(height: 40)
                 
