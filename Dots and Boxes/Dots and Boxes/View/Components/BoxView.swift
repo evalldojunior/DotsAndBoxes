@@ -9,7 +9,7 @@ import SwiftUI
 
 public struct BoxView: View {
     @ObservedObject var environment: GameEnvironment
-
+    var colorDefault = Color.whiteColor.opacity(0.01)
     @State var colorTop = Color.whiteColor.opacity(0.01)
     @State var colorBottom = Color.whiteColor.opacity(0.01)
     @State var colorLeft = Color.whiteColor.opacity(0.01)
@@ -23,6 +23,7 @@ public struct BoxView: View {
     
     func tapped(line: chosenLineType) {
         environment.startCountDown()
+        AudioPlayer.shared.play(name: "tapLine", volume: 0.2, delay: 0.0)
         if line == .top {
             if !box.top! {
                 box.top = true
@@ -76,14 +77,18 @@ public struct BoxView: View {
                         .foregroundColor(colorTop)
                         .frame(width: geometry.size.width, height: 5)
                         .onTapGesture {
-                            tapped(line: .top)
+                            if colorTop == colorDefault {
+                                tapped(line: .top)
+                            }
                         }
                     Spacer()
                     Line()
                         .foregroundColor(colorBottom)
                         .frame(width: geometry.size.width, height: 5)
                         .onTapGesture {
-                            tapped(line: .bottom)
+                            if colorBottom == colorDefault {
+                                tapped(line: .bottom)
+                            }
                         }
                 }
                 HStack{
@@ -91,14 +96,18 @@ public struct BoxView: View {
                         .foregroundColor(colorLeft)
                         .frame(width: 5, height: geometry.size.height)
                         .onTapGesture {
-                            tapped(line: .left)
+                            if colorLeft == colorDefault {
+                                tapped(line: .left)
+                            }
                         }
                     Spacer()
                     Line()
                         .foregroundColor(colorRight)
                         .frame(width: 5, height: geometry.size.height)
                         .onTapGesture {
-                            tapped(line: .right)
+                            if colorRight == colorDefault {
+                                tapped(line: .right)
+                            }
                         }
                 }
             }

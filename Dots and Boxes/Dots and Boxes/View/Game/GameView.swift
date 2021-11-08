@@ -123,7 +123,6 @@ public struct GameView: View {
             }
             
             if environment.endGame {
-                Spacer().frame(height: 40)
                 EndGame(environment: environment, restartGame: $endGame)
                     .opacity(self.endGame ? 1 : 0)
             }
