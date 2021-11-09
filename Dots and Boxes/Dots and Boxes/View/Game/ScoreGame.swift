@@ -13,7 +13,7 @@ public struct ScoreView: View {
     public var body: some View {
         HStack {
             // player 01
-            ZStack(alignment: .top){
+            ZStack(alignment: .bottomLeading){
                 HStack{
                     VStack(alignment: .leading){
                         Text("\(environment.player1Points!)")

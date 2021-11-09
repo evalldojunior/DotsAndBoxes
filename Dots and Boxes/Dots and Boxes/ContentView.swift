@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewManager: ViewManager
+    
     /// user inputs
     // Names
     let player1Name = "testeeeeeeeee"

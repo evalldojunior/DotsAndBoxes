@@ -11,3 +11,8 @@ public class Onboarding: ObservableObject {
     public init() {}
     @Published public var page = 0
 }
+
+public class ViewManager: ObservableObject {
+    public init() {}
+    @Published public var pages = 0
+}

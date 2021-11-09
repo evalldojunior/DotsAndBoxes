@@ -23,7 +23,7 @@ public struct BoxView: View {
     
     func tapped(line: chosenLineType) {
         environment.startCountDown()
-        AudioPlayer.shared.play(name: "tapLine", volume: 0.2, delay: 0.0)
+        AudioPlayer.shared.play(name: "tapLine", volume: 0.1, delay: 0.0)
         if line == .top {
             if !box.top! {
                 box.top = true
