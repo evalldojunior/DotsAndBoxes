@@ -21,7 +21,7 @@ struct ConfigView: View {
     @State var nSquare: Int = 6
     @State var updateArena: Bool = true
     @State var startGame: Bool = false
-    @State var offset = 105
+    @State var offset = 115
     
     
     var body: some View {
@@ -196,6 +196,7 @@ struct ConfigView: View {
                     HStack {
                         Spacer()
                         Button(action: {
+                            AudioPlayer.shared.play(name: "tapLine", volume: 0.2, delay: 0.0)
                             withAnimation(.easeInOut(duration: 0.75)) {
                                 startGame = true
                             }
@@ -246,7 +247,7 @@ struct ConfigView: View {
                         .frame(width: 20, height: 20)
                         .shadow(radius: 3)
                         .offset(x: CGFloat(self.offset), y: -CGFloat(self.offset))
-                }.frame(width: 230, height: 230)
+                }.frame(width: 250, height: 250)
                 .opacity(startGame ? 1 : 0)
             }
             
@@ -256,16 +257,6 @@ struct ConfigView: View {
         .padding(100)
         .onTapGesture {
             self.endTextEditing()
-            startGame = false
-//            AudioPlayer.shared.play(name: "discoveredSound", volume: 0.5, delay: 0.0)
-//            withAnimation(){
-//                self.showColors = true
-//            }
-            
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-//                self.startGame = true
-//
-//            }
         }
         .onChange(of: selectedSize) { _ in
             withAnimation {

@@ -107,31 +107,17 @@ public struct EndGame: View {
                     .padding()
                 Spacer().frame(height: 130)
             }
-            
-//            VStack {
-//                Spacer()
-//                HStack{
-//                    Image(systemName: "lightbulb.fill")
-//                        .resizable()
-//                        .frame(width: 15, height: 23, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-//                        .foregroundColor(Color.lightGreyColor)
-//
-//                    Text("modify the attributes on the left side for a new and different game")
-//                        .font(.custom("Raleway-Regular", size: 16))
-//                        .foregroundColor(Color.lightGreyColor)
-//                        .multilineTextAlignment(.center)
-//                        .lineSpacing(6)
-//                }
-//                Spacer()
-//                    .frame(height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-//            }
         }
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         .background(Color.darkColor.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/))
         .onTapGesture {
-            // restart game
-            environment.resetGame()
-            restartGame = false
+            withAnimation(.easeInOut(duration: 0.5)){
+                viewManager.pages = 0
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                environment.resetGame()
+                restartGame = false
+            }
         }
     }
 }
