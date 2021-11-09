@@ -59,13 +59,13 @@ public struct StartView: View {
                     .frame(width: 210, height: 210, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 
                 Circle()
-                    .foregroundColor(player1Color)
+                    .foregroundColor(player2Color)
                     .frame(width: 43, height: 43)
                     .padding(.leading, 48)
                     .padding(.bottom, 13)
                 
                 Circle()
-                    .foregroundColor(player2Color)
+                    .foregroundColor(player1Color)
                     .frame(width: 43, height: 43)
                     .padding(.leading, 48)
                     .padding(.bottom, 65)

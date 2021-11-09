@@ -26,6 +26,7 @@ struct ConfigView: View {
                 Image(uiImage: UIImage(imageLiteralResourceName: "logoInvert"))
                     .resizable()
                     .frame(width: 210, height: 210, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .onTapGesture {self.endTextEditing()}
             
                 Spacer()
                 ZStack(alignment: .bottomLeading) {
@@ -84,6 +85,7 @@ struct ConfigView: View {
                 .background(Color.darkGreyColor)
                 .cornerRadius(11)
                 .shadow(color: Color.black.opacity(0.2),radius: 20)
+                .onTapGesture {self.endTextEditing()}
                 
                 Spacer().frame(height: 32)
                 
@@ -116,7 +118,7 @@ struct ConfigView: View {
                                 .multilineTextAlignment(.leading)
                             
                             
-                            ColorPicker("choose a color", selection: $viewManager.player01Color)
+                            ColorPicker("choose a color", selection: $viewManager.player01Color, supportsOpacity: false)
                                 .frame(maxWidth: .infinity)
                                 .font(.custom("Raleway-Regular", size: 18))
                                 .foregroundColor(Color.whiteColor)
@@ -129,7 +131,7 @@ struct ConfigView: View {
                         
                     }
                     .frame(width: (UIScreen.main.bounds.width-200)/2)
-                    .background(Color.darkGreyColor)
+                    .background(Color.darkGreyColor.onTapGesture {self.endTextEditing()})
                     .cornerRadius(11)
                     .overlay(
                         RoundedRectangle(cornerRadius: 11)
@@ -165,7 +167,7 @@ struct ConfigView: View {
                                 .multilineTextAlignment(.leading)
                             
                             
-                            ColorPicker("choose a color", selection: $viewManager.player02Color)
+                            ColorPicker("choose a color", selection: $viewManager.player02Color, supportsOpacity: false)
                             .frame(maxWidth: .infinity)
                             .font(.custom("Raleway-Regular", size: 18))
                             .foregroundColor(Color.whiteColor)
@@ -178,7 +180,7 @@ struct ConfigView: View {
                         
                     }
                     .frame(width: (UIScreen.main.bounds.width-200)/2)
-                    .background(Color.darkGreyColor)
+                    .background(Color.darkGreyColor.onTapGesture {self.endTextEditing()})
                     .cornerRadius(11)
                     .overlay(
                         RoundedRectangle(cornerRadius: 11)
@@ -197,6 +199,12 @@ struct ConfigView: View {
                             }
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
                                 viewManager.pages = 1
+                                if viewManager.player01Name == "" {
+                                    viewManager.player01Name = "player 01"
+                                }
+                                if viewManager.player02Name == "" {
+                                    viewManager.player02Name = "player 02"
+                                }
                             }
                             
                         }, label: {
@@ -248,11 +256,10 @@ struct ConfigView: View {
             
         }
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-        .background(Color.darkColor.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/))
+        .background(Color.darkColor.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).onTapGesture {self.endTextEditing()})
         .padding(100)
-        .onTapGesture {
-            self.endTextEditing()
-        }
+//        .gesture(DragGesture().onChanged{_ in self.endTextEditing()})
+//        .onTapGesture {self.endTextEditing()}
         .onChange(of: selectedSize) { _ in
             withAnimation {
                 updateArena = false

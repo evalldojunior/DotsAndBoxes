@@ -8,6 +8,7 @@
 import SwiftUI
 
 public struct GameView: View {
+    @EnvironmentObject var viewManager: ViewManager
     @ObservedObject var environment: GameEnvironment
     
     var rowCount = 9
@@ -102,6 +103,42 @@ public struct GameView: View {
                                 .lineSpacing(10)
                         }.padding(.bottom, -50)
                         
+                        VStack{
+                            Button(action: {
+                                AudioPlayer.shared.play(name: "tapLine", volume: 0.2, delay: 0.0)
+//                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                    environment.endGame = true
+                                    environment.resetGame()
+                                    endGame = false
+//                                }
+                                withAnimation(.easeInOut(duration: 0.5)){
+                                    viewManager.pages = 0
+                                }
+                                
+                            }, label: {
+                                HStack {
+                                    Image(systemName: "chevron.backward")
+                                        .foregroundColor(Color.whiteColor)
+                                        .frame(width: 14, height: 14)
+                                        .padding(.leading)
+                                    Text("menu")
+                                        .font(.custom("Bebas Neue", size: 18))
+                                        .foregroundColor(Color.whiteColor)
+                                        .multilineTextAlignment(.center)
+                                        .padding(.top, 2)
+                                    Spacer()
+                                }
+                                
+                            }).frame(width:95 , height: 40)
+                            .clipped()
+                            .background(Color.lightGreyColor)
+                            .cornerRadius(50)
+                            .shadow(radius: 6)
+                            .padding()
+                            Spacer()
+                        }
+                        .frame(width: UIScreen.main.bounds.width-100, height: UIScreen.main.bounds.width-100, alignment: .leading)
+                        
                     }
                     
                     .opacity(self.environment.pause! ? 1 : 0)
@@ -132,6 +169,7 @@ public struct GameView: View {
         .background(Color.darkColor.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/))
         .onAppear(){
             self.environment.pause = true
+            self.startGame = false
         }
         .onChange(of: self.startGame) { _ in
             self.environment.pauseGame()
