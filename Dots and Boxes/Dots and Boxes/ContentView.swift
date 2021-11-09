@@ -12,21 +12,21 @@ struct ContentView: View {
     
     /// user inputs
     // Names
-    let player1Name = "testeeeeeeeee"
-    let player2Name = "testeeeeeeeeeeeeeeeee"
+    var player1Name = "player 01"
+    var player2Name = "player 02"
 
     // Colors
     // select the color following the example below
-    let player1Color = Color(UIColor.systemTeal)
-    let player2Color = Color(UIColor.systemIndigo)
+    var player1Color = Color(UIColor.systemTeal)
+    var player2Color = Color(UIColor.systemIndigo)
       
       
     // The arena is a square matrix of order n (n-square matrix)
     // this playgrounds accepts 3 <= n <= 9 for better results
-    let n = 3
+    var n = 6
     
     var body: some View {
-        GameView(player1Name: player1Name, player2Name: player2Name, player1Color: player1Color, player2Color: player2Color, nOrder: n)
+        GameView(player1Name: viewManager.player01Name, player2Name: viewManager.player02Name, player1Color: viewManager.player01Color, player2Color: viewManager.player02Color, nOrder: viewManager.nSquare)
     }
 }
 

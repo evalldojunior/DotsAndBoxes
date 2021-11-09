@@ -11,10 +11,6 @@ struct ConfigView: View {
     @EnvironmentObject var viewManager: ViewManager
     
     @State var showColors = false
-    @State var player1Color = Color(UIColor.systemTeal)
-    @State var player2Color = Color(UIColor.systemYellow)
-    @State var player1Name = "player 01"
-    @State var player2Name = "player 02"
     var sizes = ["3x3 (9 squares)", "4x4 (16 squares)", "5x5 (25 squares)", "6x6 (36 squares)","7x7 (49 squares)", "8x8 (64 squares)", "9x9 (81 squares)"]
     @State var selectedSize = "6x6 (36 squares)"
     var boxSize = CGFloat(((UIScreen.main.bounds.width-200)/2)-96)
@@ -22,7 +18,6 @@ struct ConfigView: View {
     @State var updateArena: Bool = true
     @State var startGame: Bool = false
     @State var offset = 115
-    
     
     var body: some View {
         VStack(spacing: 0) {
@@ -60,21 +55,21 @@ struct ConfigView: View {
                         
                         if updateArena {
                             VStack(spacing: 0){
-                                ForEach(0..<nSquare+1) { indexX in
+                                ForEach(0..<viewManager.nSquare+1) { indexX in
                                     HStack(spacing: 0){
-                                        ForEach(0..<nSquare+1) { indexY in
+                                        ForEach(0..<viewManager.nSquare+1) { indexY in
                                             Circle()
                                                 .foregroundColor(Color.whiteColor)
                                                 .frame(width: 8, height: 8)
                                                 .shadow(radius: 3)
                                             
-                                            if (indexY < nSquare) {
-                                                Spacer().frame(width: (boxSize/CGFloat(nSquare)))
+                                            if (indexY < viewManager.nSquare) {
+                                                Spacer().frame(width: (boxSize/CGFloat(viewManager.nSquare)))
                                             }
                                         }
                                     }
-                                    if (indexX < nSquare) {
-                                        Spacer().frame(height: (boxSize/CGFloat(nSquare)))
+                                    if (indexX < viewManager.nSquare) {
+                                        Spacer().frame(height: (boxSize/CGFloat(viewManager.nSquare)))
                                     }
                                 }
                             }
@@ -101,15 +96,15 @@ struct ConfigView: View {
                                 .foregroundColor(Color.whiteColor)
                                 .multilineTextAlignment(.leading)
                             
-                            TextField("player 01", text: $player1Name)
+                            TextField("player 01", text: $viewManager.player01Name)
                                 .font(.custom("Raleway-Regular", size: 18))
                                 .foregroundColor(Color.whiteColor)
                                 .padding()
                                 .background(Color.lightGreyColor)
                                 .cornerRadius(6)
                                 .onTapGesture {
-                                    if self.player1Name == "player 01" {
-                                        self.player1Name = ""
+                                    if self.viewManager.player01Name == "player 01" {
+                                        self.viewManager.player01Name = ""
                                     }
                                 }
                             
@@ -121,7 +116,7 @@ struct ConfigView: View {
                                 .multilineTextAlignment(.leading)
                             
                             
-                            ColorPicker("choose a color", selection: $player1Color)
+                            ColorPicker("choose a color", selection: $viewManager.player01Color)
                                 .frame(maxWidth: .infinity)
                                 .font(.custom("Raleway-Regular", size: 18))
                                 .foregroundColor(Color.whiteColor)
@@ -138,7 +133,7 @@ struct ConfigView: View {
                     .cornerRadius(11)
                     .overlay(
                         RoundedRectangle(cornerRadius: 11)
-                            .stroke(player1Color, lineWidth: 1.5)
+                            .stroke(viewManager.player01Color, lineWidth: 1.5)
                     )
                     .shadow(color: Color.black.opacity(0.2),radius: 20)
                     
@@ -150,15 +145,15 @@ struct ConfigView: View {
                                 .foregroundColor(Color.whiteColor)
                                 .multilineTextAlignment(.leading)
                             
-                            TextField("player 02", text: $player2Name)
+                            TextField("player 02", text: $viewManager.player02Name)
                                 .font(.custom("Raleway-Regular", size: 18))
                                 .foregroundColor(Color.whiteColor)
                                 .padding()
                                 .background(Color.lightGreyColor)
                                 .cornerRadius(6)
                                 .onTapGesture {
-                                    if self.player2Name == "player 02" {
-                                        self.player2Name = ""
+                                    if self.viewManager.player02Name == "player 02" {
+                                        self.viewManager.player02Name = ""
                                     }
                                 }
                             
@@ -170,7 +165,7 @@ struct ConfigView: View {
                                 .multilineTextAlignment(.leading)
                             
                             
-                            ColorPicker("choose a color", selection: $player2Color)
+                            ColorPicker("choose a color", selection: $viewManager.player02Color)
                             .frame(maxWidth: .infinity)
                             .font(.custom("Raleway-Regular", size: 18))
                             .foregroundColor(Color.whiteColor)
@@ -187,7 +182,7 @@ struct ConfigView: View {
                     .cornerRadius(11)
                     .overlay(
                         RoundedRectangle(cornerRadius: 11)
-                            .stroke(player2Color, lineWidth: 1.5)
+                            .stroke(viewManager.player02Color, lineWidth: 1.5)
                     )
                     .shadow(color: Color.black.opacity(0.2),radius: 20)
                 }
@@ -265,7 +260,7 @@ struct ConfigView: View {
             let selectedIndex = selectedSize.index(selectedSize.startIndex, offsetBy: 0)
             let charVal = selectedSize[selectedIndex]
             if let intValue = charVal.wholeNumberValue {
-                nSquare = intValue
+                viewManager.nSquare = intValue
             } else {
                 print("Not an integer")
             }
@@ -274,6 +269,9 @@ struct ConfigView: View {
                     updateArena = true
                 }
             }
+        }
+        .onAppear {
+            self.selectedSize = "\(viewManager.nSquare)x\(viewManager.nSquare) (\(viewManager.nSquare*viewManager.nSquare) squares)"
         }
     }
 }

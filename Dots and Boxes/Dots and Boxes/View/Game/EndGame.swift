@@ -8,6 +8,7 @@
 import SwiftUI
 
 public struct EndGame: View {
+    @EnvironmentObject var viewManager: ViewManager
     @ObservedObject var environment: GameEnvironment
     @Binding var restartGame: Bool
     

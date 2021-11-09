@@ -49,7 +49,7 @@
 		0815F87426865C80008289CD /* OnboardingPage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F87326865C80008289CD /* OnboardingPage3.swift */; };
 		0815F87626865C8D008289CD /* OnboardingPage4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F87526865C8D008289CD /* OnboardingPage4.swift */; };
 		0815F87826865C9B008289CD /* OnboardingPage5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F87726865C9B008289CD /* OnboardingPage5.swift */; };
-		083F83CA273A24A200FA7F9F /* ViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083F83C9273A24A200FA7F9F /* ViewManager.swift */; };
+		083F83CA273A24A200FA7F9F /* ViewManagerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083F83C9273A24A200FA7F9F /* ViewManagerClass.swift */; };
 		085FC20C273961E600B7DE53 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 085FC20B273961E600B7DE53 /* Launch Screen.storyboard */; };
 		085FC20E27399A6600B7DE53 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085FC20D27399A6600B7DE53 /* ConfigView.swift */; };
 		085FC2102739A42A00B7DE53 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085FC20F2739A42A00B7DE53 /* Views.swift */; };
@@ -107,7 +107,7 @@
 		0815F87326865C80008289CD /* OnboardingPage3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage3.swift; sourceTree = "<group>"; };
 		0815F87526865C8D008289CD /* OnboardingPage4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage4.swift; sourceTree = "<group>"; };
 		0815F87726865C9B008289CD /* OnboardingPage5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage5.swift; sourceTree = "<group>"; };
-		083F83C9273A24A200FA7F9F /* ViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewManager.swift; sourceTree = "<group>"; };
+		083F83C9273A24A200FA7F9F /* ViewManagerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewManagerClass.swift; sourceTree = "<group>"; };
 		085FC20B273961E600B7DE53 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		085FC20D27399A6600B7DE53 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		085FC20F2739A42A00B7DE53 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 				0815F828268653CB008289CD /* Model */,
 				0815F82526865315008289CD /* Extensions */,
 				0815F81826865245008289CD /* ContentView.swift */,
-				083F83C9273A24A200FA7F9F /* ViewManager.swift */,
+				083F83C9273A24A200FA7F9F /* ViewManagerClass.swift */,
 				085FC20B273961E600B7DE53 /* Launch Screen.storyboard */,
 				0815F81A26865247008289CD /* Assets.xcassets */,
 				0815F81F26865247008289CD /* Info.plist */,
@@ -402,7 +402,7 @@
 				0815F86726865B7B008289CD /* ScoreGame.swift in Sources */,
 				0815F831268657EB008289CD /* UserSettings.swift in Sources */,
 				0815F82726865334008289CD /* ExtensionColor.swift in Sources */,
-				083F83CA273A24A200FA7F9F /* ViewManager.swift in Sources */,
+				083F83CA273A24A200FA7F9F /* ViewManagerClass.swift in Sources */,
 				0815F81726865245008289CD /* Dots_and_BoxesApp.swift in Sources */,
 				0815F87026865C33008289CD /* OnboardingPage1.swift in Sources */,
 				0815F86526865B5D008289CD /* GameView.swift in Sources */,
