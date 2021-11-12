@@ -8,12 +8,13 @@
 import SwiftUI
 
 public struct GameView: View {
+    @EnvironmentObject var viewManager: ViewManager
     @ObservedObject var environment: GameEnvironment
     
     var rowCount = 9
     var colCount = 9
-    var maxFrameGame = CGFloat(625)
-    var boxSize = CGFloat(69)
+    var maxFrameGame = CGFloat(UIScreen.main.bounds.height*0.625)
+    var boxSize = CGFloat(UIScreen.main.bounds.height*0.069)
     @State var startGame = false
     @State var endGame = false
     
@@ -32,6 +33,8 @@ public struct GameView: View {
         }
         
         self.environment = GameEnvironment(rowCount: self.rowCount, colCount: self.colCount, player1Name: player1Name, player2Name: player2Name, player1Color: player1Color, player2Color: player2Color)
+        
+        boxSize = CGFloat(((Int(UIScreen.main.bounds.width)-150+(5*colCount))/colCount))
     }
     
     public var body: some View {
@@ -41,20 +44,20 @@ public struct GameView: View {
             if !environment.endGame {
                 ZStack {
                     Rectangle()
-                        .frame(width: boxSize*CGFloat(colCount)+CGFloat((20-colCount)), height: boxSize*CGFloat(rowCount)+CGFloat((20-rowCount)))
+                        .frame(width: boxSize*CGFloat(colCount)-CGFloat((5*colCount))+CGFloat(50), height: boxSize*CGFloat(rowCount)-CGFloat((5*rowCount))+CGFloat(50))
                         .foregroundColor(Color.darkGreyColor)
                         .cornerRadius(11)
                         .shadow(color: Color.black.opacity(0.2),radius: 20)
                     
                     // boxes and lines
-                    VStack{
+                    VStack(spacing: -5){
                         ForEach(0..<rowCount) { indexX in
-                            HStack{
+                            HStack(spacing: -5){
                                 ForEach(0..<colCount) { indexY in
                                     
                                     BoxView(environment: environment, indexX: indexX, indexY: indexY, box: environment.allBoxes[indexX][ indexY])
                                         .frame(width: boxSize, height: boxSize, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                        .padding(-7)
+                                        
                                     
                                 }
                             }
@@ -63,19 +66,18 @@ public struct GameView: View {
                     .opacity(self.environment.pause! ? 0 : 1)
                     
                     // dots
-                    VStack{
+                    VStack(spacing: 0){
                         ForEach(0..<rowCount+1) { indexX in
-                            HStack{
+                            HStack(spacing: 0){
                                 ForEach(0..<colCount+1) { indexY in
                                     Dot()
-                                        .padding(-2)
                                     if (indexY < colCount) {
-                                        Spacer().frame(width: boxSize-15)
+                                        Spacer().frame(width: boxSize-18)
                                     }
                                 }
                             }
                             if (indexX < rowCount) {
-                                Spacer().frame(height: boxSize-15)
+                                Spacer().frame(height: boxSize-18)
                             }
                         }
                     }.opacity(self.environment.pause! ? 0 : 1)
@@ -83,9 +85,10 @@ public struct GameView: View {
                     // game paused
                     ZStack{
                         Rectangle()
-                            .frame(width: maxFrameGame, height: maxFrameGame)
+                            .frame(width: UIScreen.main.bounds.width-100, height: UIScreen.main.bounds.width-100)
                             .foregroundColor(Color.darkGreyColor)
                             .cornerRadius(11)
+                            
                         
                         VStack{
                             Text("game paused")
@@ -100,7 +103,44 @@ public struct GameView: View {
                                 .lineSpacing(10)
                         }.padding(.bottom, -50)
                         
+                        VStack{
+                            Button(action: {
+                                AudioPlayer.shared.play(name: "tapLine", volume: 0.2, delay: 0.0)
+//                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                    environment.endGame = true
+                                    environment.resetGame()
+                                    endGame = false
+//                                }
+                                withAnimation(.easeInOut(duration: 0.5)){
+                                    viewManager.pages = 0
+                                }
+                                
+                            }, label: {
+                                HStack {
+                                    Image(systemName: "chevron.backward")
+                                        .foregroundColor(Color.whiteColor)
+                                        .frame(width: 14, height: 14)
+                                        .padding(.leading)
+                                    Text("menu")
+                                        .font(.custom("Bebas Neue", size: 18))
+                                        .foregroundColor(Color.whiteColor)
+                                        .multilineTextAlignment(.center)
+                                        .padding(.top, 2)
+                                    Spacer()
+                                }
+                                
+                            }).frame(width:95 , height: 40)
+                            .clipped()
+                            .background(Color.lightGreyColor)
+                            .cornerRadius(50)
+                            .shadow(radius: 6)
+                            .padding()
+                            Spacer()
+                        }
+                        .frame(width: UIScreen.main.bounds.width-100, height: UIScreen.main.bounds.width-100, alignment: .leading)
+                        
                     }
+                    
                     .opacity(self.environment.pause! ? 1 : 0)
                     .onTapGesture {
                         self.environment.pauseGame()
@@ -108,7 +148,7 @@ public struct GameView: View {
                     
                     
                 }
-                .frame(width: maxFrameGame, height: maxFrameGame)
+                .frame(width: boxSize*CGFloat(colCount), height: boxSize*CGFloat(colCount))
                 .disabled(environment.endGame)
                 Spacer().frame(height: 40)
                 
@@ -120,16 +160,16 @@ public struct GameView: View {
             }
             
             if environment.endGame {
-                Spacer().frame(height: 40)
                 EndGame(environment: environment, restartGame: $endGame)
                     .opacity(self.endGame ? 1 : 0)
             }
             
         }
-        .frame(width: 770, height: 1000)
-        .background(Color.darkColor)
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        .background(Color.darkColor.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/))
         .onAppear(){
             self.environment.pause = true
+            self.startGame = false
         }
         .onChange(of: self.startGame) { _ in
             self.environment.pauseGame()

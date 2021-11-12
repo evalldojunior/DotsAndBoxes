@@ -7,11 +7,17 @@
 
 import SwiftUI
 
+//var viewManagerRoot = ViewManager()
+//var views: some View = ViewManagerClass().environmentObject(viewManagerRoot)
+
 @main
 struct Dots_and_BoxesApp: App {
+    @StateObject private var viewManagerRoot = ViewManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
+            ViewManagerClass().environmentObject(viewManagerRoot)
         }
     }
 }

@@ -49,6 +49,17 @@
 		0815F87426865C80008289CD /* OnboardingPage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F87326865C80008289CD /* OnboardingPage3.swift */; };
 		0815F87626865C8D008289CD /* OnboardingPage4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F87526865C8D008289CD /* OnboardingPage4.swift */; };
 		0815F87826865C9B008289CD /* OnboardingPage5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F87726865C9B008289CD /* OnboardingPage5.swift */; };
+		083F83CA273A24A200FA7F9F /* ViewManagerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083F83C9273A24A200FA7F9F /* ViewManagerClass.swift */; };
+		085FC20C273961E600B7DE53 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 085FC20B273961E600B7DE53 /* Launch Screen.storyboard */; };
+		085FC20E27399A6600B7DE53 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085FC20D27399A6600B7DE53 /* ConfigView.swift */; };
+		085FC2102739A42A00B7DE53 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085FC20F2739A42A00B7DE53 /* Views.swift */; };
+		08D07A4A268677BC007F0A99 /* Raleway-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08D07A49268677BC007F0A99 /* Raleway-VariableFont_wght.ttf */; };
+		08D07A4E2686792A007F0A99 /* discoveredSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08D07A4C2686792A007F0A99 /* discoveredSound.wav */; };
+		08D07A4F2686792A007F0A99 /* boxSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08D07A4D2686792A007F0A99 /* boxSound.wav */; };
+		08D07A5226867933007F0A99 /* lostExtraLifeSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08D07A5026867933007F0A99 /* lostExtraLifeSound.wav */; };
+		08D07A5326867933007F0A99 /* pauseSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08D07A5126867933007F0A99 /* pauseSound.wav */; };
+		08D07A562686793D007F0A99 /* tapLine.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08D07A542686793C007F0A99 /* tapLine.wav */; };
+		08D07A572686793D007F0A99 /* winSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08D07A552686793D007F0A99 /* winSound.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +107,17 @@
 		0815F87326865C80008289CD /* OnboardingPage3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage3.swift; sourceTree = "<group>"; };
 		0815F87526865C8D008289CD /* OnboardingPage4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage4.swift; sourceTree = "<group>"; };
 		0815F87726865C9B008289CD /* OnboardingPage5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage5.swift; sourceTree = "<group>"; };
+		083F83C9273A24A200FA7F9F /* ViewManagerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewManagerClass.swift; sourceTree = "<group>"; };
+		085FC20B273961E600B7DE53 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		085FC20D27399A6600B7DE53 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
+		085FC20F2739A42A00B7DE53 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		08D07A49268677BC007F0A99 /* Raleway-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		08D07A4C2686792A007F0A99 /* discoveredSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = discoveredSound.wav; sourceTree = "<group>"; };
+		08D07A4D2686792A007F0A99 /* boxSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boxSound.wav; sourceTree = "<group>"; };
+		08D07A5026867933007F0A99 /* lostExtraLifeSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lostExtraLifeSound.wav; sourceTree = "<group>"; };
+		08D07A5126867933007F0A99 /* pauseSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pauseSound.wav; sourceTree = "<group>"; };
+		08D07A542686793C007F0A99 /* tapLine.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tapLine.wav; sourceTree = "<group>"; };
+		08D07A552686793D007F0A99 /* winSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = winSound.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,9 +156,12 @@
 				0815F828268653CB008289CD /* Model */,
 				0815F82526865315008289CD /* Extensions */,
 				0815F81826865245008289CD /* ContentView.swift */,
+				083F83C9273A24A200FA7F9F /* ViewManagerClass.swift */,
+				085FC20B273961E600B7DE53 /* Launch Screen.storyboard */,
 				0815F81A26865247008289CD /* Assets.xcassets */,
 				0815F81F26865247008289CD /* Info.plist */,
 				0815F832268658DD008289CD /* Fonts */,
+				08D07A4B26867903007F0A99 /* Sounds */,
 				0815F81C26865247008289CD /* Preview Content */,
 			);
 			path = "Dots and Boxes";
@@ -154,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				0815F82626865334008289CD /* ExtensionColor.swift */,
+				085FC20F2739A42A00B7DE53 /* Views.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -179,6 +205,7 @@
 		0815F832268658DD008289CD /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				08D07A49268677BC007F0A99 /* Raleway-VariableFont_wght.ttf */,
 				0815F83D2686592E008289CD /* BebasNeue-Regular.ttf */,
 				0815F8422686592E008289CD /* Raleway-Black.ttf */,
 				0815F8432686592E008289CD /* Raleway-BlackItalic.ttf */,
@@ -230,6 +257,7 @@
 				0815F86626865B7B008289CD /* ScoreGame.swift */,
 				0815F86826865B9A008289CD /* StartGame.swift */,
 				0815F86A26865BBA008289CD /* TimerView.swift */,
+				085FC20D27399A6600B7DE53 /* ConfigView.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -245,6 +273,19 @@
 				0815F87726865C9B008289CD /* OnboardingPage5.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		08D07A4B26867903007F0A99 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				08D07A542686793C007F0A99 /* tapLine.wav */,
+				08D07A552686793D007F0A99 /* winSound.wav */,
+				08D07A5026867933007F0A99 /* lostExtraLifeSound.wav */,
+				08D07A5126867933007F0A99 /* pauseSound.wav */,
+				08D07A4D2686792A007F0A99 /* boxSound.wav */,
+				08D07A4C2686792A007F0A99 /* discoveredSound.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,10 +345,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08D07A5226867933007F0A99 /* lostExtraLifeSound.wav in Resources */,
 				0815F8522686592E008289CD /* Raleway-SemiBoldItalic.ttf in Resources */,
 				0815F8532686592E008289CD /* Raleway-Thin.ttf in Resources */,
+				08D07A572686793D007F0A99 /* winSound.wav in Resources */,
 				0815F8552686592E008289CD /* Raleway-Black.ttf in Resources */,
 				0815F81E26865247008289CD /* Preview Assets.xcassets in Resources */,
+				08D07A562686793D007F0A99 /* tapLine.wav in Resources */,
 				0815F84E2686592E008289CD /* Raleway-ExtraBoldItalic.ttf in Resources */,
 				0815F8542686592E008289CD /* Raleway-ExtraBold.ttf in Resources */,
 				0815F8562686592E008289CD /* Raleway-BlackItalic.ttf in Resources */,
@@ -317,11 +361,16 @@
 				0815F84F2686592E008289CD /* Raleway-BoldItalic.ttf in Resources */,
 				0815F84C2686592E008289CD /* Raleway-Italic.ttf in Resources */,
 				0815F8482686592E008289CD /* Raleway-Light.ttf in Resources */,
+				08D07A4A268677BC007F0A99 /* Raleway-VariableFont_wght.ttf in Resources */,
 				0815F81B26865247008289CD /* Assets.xcassets in Resources */,
 				0815F8462686592E008289CD /* Raleway-ExtraLight.ttf in Resources */,
+				08D07A5326867933007F0A99 /* pauseSound.wav in Resources */,
 				0815F8472686592E008289CD /* Raleway-Bold.ttf in Resources */,
 				0815F84B2686592E008289CD /* Raleway-ThinItalic.ttf in Resources */,
+				08D07A4F2686792A007F0A99 /* boxSound.wav in Resources */,
+				08D07A4E2686792A007F0A99 /* discoveredSound.wav in Resources */,
 				0815F84A2686592E008289CD /* Raleway-ExtraLightItalic.ttf in Resources */,
+				085FC20C273961E600B7DE53 /* Launch Screen.storyboard in Resources */,
 				0815F8572686592E008289CD /* Raleway-Medium.ttf in Resources */,
 				0815F8492686592E008289CD /* Raleway-LightItalic.ttf in Resources */,
 				0815F8512686592E008289CD /* Raleway-SemiBold.ttf in Resources */,
@@ -339,6 +388,8 @@
 				0815F86926865B9A008289CD /* StartGame.swift in Sources */,
 				0815F81926865245008289CD /* ContentView.swift in Sources */,
 				0815F87826865C9B008289CD /* OnboardingPage5.swift in Sources */,
+				085FC2102739A42A00B7DE53 /* Views.swift in Sources */,
+				085FC20E27399A6600B7DE53 /* ConfigView.swift in Sources */,
 				0815F82A268653F4008289CD /* Box.swift in Sources */,
 				0815F87226865C58008289CD /* OnboardingPage2.swift in Sources */,
 				0815F82D268654DA008289CD /* AudioPlayer.swift in Sources */,
@@ -351,6 +402,7 @@
 				0815F86726865B7B008289CD /* ScoreGame.swift in Sources */,
 				0815F831268657EB008289CD /* UserSettings.swift in Sources */,
 				0815F82726865334008289CD /* ExtensionColor.swift in Sources */,
+				083F83CA273A24A200FA7F9F /* ViewManagerClass.swift in Sources */,
 				0815F81726865245008289CD /* Dots_and_BoxesApp.swift in Sources */,
 				0815F87026865C33008289CD /* OnboardingPage1.swift in Sources */,
 				0815F86526865B5D008289CD /* GameView.swift in Sources */,
@@ -483,20 +535,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Dots and Boxes/Preview Content\"";
 				DEVELOPMENT_TEAM = SJND557DN4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Dots and Boxes/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy.Dots-and-Boxes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -505,20 +559,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Dots and Boxes/Preview Content\"";
 				DEVELOPMENT_TEAM = SJND557DN4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Dots and Boxes/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy.Dots-and-Boxes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
